@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Lexend&family=Lilita+One&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    color: white;
+    background-color: #17181F;
+    font-family: "Lexend", sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: #1E1F27;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #7871F2;
+}
+
+.first {
+    margin-top: 100px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.description p {
+    text-align: left;
+    line-height: 30px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.description a {
+    background-color: #FF8181;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 150px;
+}
+
+.unlock-your {
+    text-align: center;
+    font-size: 10vw;
+    width: 100%;
+    font-family: "Lilita One", "Helvetica Neue", Helvetica, Arial;
+}
+
+.mind {
+    font-family: "Lilita One", "Helvetica Neue", Helvetica, Arial;
+    font-size: 8vw;
+    padding: 1.5vw 3.5vw;
+    background-color: #7871F2;
+    border-radius: 150px;
+}
+
+.brain-learn-img {
+    width: 60vh;
+    height: auto;
+}
+
+.topic-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 200px;
+    margin-top: 120px; /* Adds space between top page and topics */
+    margin-bottom: 120px; /* Adds space between topics and bottom page */
+}
+
+.topic-container div {
+    width: calc(20% - 20px);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #7871F2;
+    font-size: 25px;
+    border-radius: 100px;
+}
+
+.topic-container div:nth-child(1) { /* Computing */
+    border-color: #69E4FF;
+    color: #3498db;
+}
+
+.topic-container div:nth-child(2) { /* Mathematics */
+    border-color: #73FF88;
+    color: #73FF88;
+}
+
+
+.topic-container div:nth-child(3) { /* Geography */
+    border-color: #FF6F6F;
+    color: #FF6F6F;
+}
+
+.topic-container div:nth-child(4) { /* Chemistry */
+    border-color: #FFBF65;
+    color: #FFBF65;
+}
+
+.topic-container div:nth-child(5) { /* Biology */
+    border-color: #D183FF;
+    color: #D183FF;
+}
+
+.topic-container div:nth-child(6) { /* More */
+    border-color: #FFFB8C;
+    color: #FFFB8C;
+}
+
+.topic-container div:nth-child(7) { /* More */
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.numbers-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 200px;
+    font-size: 40px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.numbers-container div span {
+    font-size: 80px;
+}
