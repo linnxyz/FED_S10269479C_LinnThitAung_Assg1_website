@@ -20,19 +20,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 1.3vw 4vw;
     border-radius: 10px;
     z-index: 1000;
 }
 
 .navbar-logo {
-    font-size: 24px;
+    font-size: 2vw;
     font-weight: bold;
 }
 
 .navbar-links {
     display: flex;
-    gap: 20px;
+    font-size: 1.5vw;
+    gap: 2vw;
 }
 
 .navbar-links a {
@@ -46,13 +47,16 @@ body {
 }
 
 .first {
-    margin-top: 100px;
+    margin-top: 8vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 .hero {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 2.5vw;
 }
 
 .description {
@@ -63,22 +67,22 @@ body {
 
 .description p {
     text-align: left;
-    line-height: 30px;
-    font-size: 18px;
-    margin-bottom: 30px;
+    line-height: 2vw;
+    font-size: 1.2vw;
+    margin-bottom: 3vw;
 }
 
 .description a {
     background-color: #FF8181;
-    padding: 20px;
+    padding: 1.5vw;
+    font-size: 1.5vw;
     text-decoration: none;
     color: white;
     border-radius: 150px;
 }
 
 .unlock-your {
-    text-align: center;
-    font-size: 10vw;
+    font-size: 11vw;
     width: 100%;
     font-family: "Lilita One", "Helvetica Neue", Helvetica, Arial;
 }
@@ -92,7 +96,7 @@ body {
 }
 
 .brain-learn-img {
-    width: 60vh;
+    width: 40vw;
     height: auto;
 }
 
@@ -100,20 +104,19 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 200px;
-    margin-top: 120px; /* Adds space between top page and topics */
-    margin-bottom: 120px; /* Adds space between topics and bottom page */
+    gap: 2vw;
+    padding: 10vw 10vw;
+
 }
 
 .topic-container div {
-    width: calc(20% - 20px);
-    height: 70px;
+    width: calc(20% - 2vw);
+    height: 4.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid #7871F2;
-    font-size: 25px;
+    font-size: 1.7vw;
     border-radius: 100px;
 }
 
@@ -157,12 +160,12 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    gap: 200px;
-    font-size: 40px;
-    margin-top: 150px;
-    margin-bottom: 150px;
+
+    padding: 5vw 5vw;
+    gap: 10vw;
+    font-size: 3vw;
 }
 
 .numbers-container div span {
-    font-size: 80px;
+    font-size: 5vw;
 }
