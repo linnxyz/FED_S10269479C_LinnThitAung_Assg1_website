@@ -3,63 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindQuest</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="navbar-logo">MindQuest</div>
-        <div class="navbar-links">
-            <a href="#">Home</a>
-            <a href="#">Topics</a>
-            <a href="#">Quiz</a>
-            <a href="#">About</a>
-        </div>
-    </div>
-
-    <div class="first">
-        <h1 class="unlock-your">UNLOCK YOUR</h1>
-        <div class="hero">
-            <div class="description">
-                <p class="hero-p">Explore engaging quizzes and brain-<br>teasing activities with MindQuest!<br>Sharpen your skills, boost your<br>knowledge, and unlock your full<br>potential. Start your journey today<br>and see how far your mind can go!</p>
-                <a href="#">Discover Now</a>
-            </div>
-            <img src="images/brain-learning 1.png" alt="" class="brain-learn-img">
-            <div>
-                <h1 class="mind">MIND</h1>
-            </div>
-        </div>
-    </div>
 
 
 
 
-    <div class="topic-container">
-        <div>Computing</div>
-        <div>Mathematics</div>
-        <div>Physics</div>
-        <div>Geography</div>
-        <div>Chemistry</div>
-        <div>Biology</div>
-        <div>More</div>
-    </div>
-
-    <div class="numbers-container">
-        <div>
-            <span class="current-users"></span>
-            <p>Current Users</p>
-        </div>
-        <div>
-            <span class="total-courses"></span>
-            <p>Total Courses</p>
-        </div>
-        <div>
-            <span class="available-quizzes"></span>
-            <p>Available Quizzes</p>
-        </div>
-    </div>
     
+    <section class="wishlist-section">
+        <img src="images/programming-img.png" alt="">
+        <div class="wishlist-content">
 
-    <script src="script.js"></script>
+            <div class="wishlist-title">
+                <h1>LEARN. GROW. SUCCEED.</h1>
+                <p>Join the wishlist to learn for free with MindQuest!</p>
+            </div>
+
+            <form class="wishlist-form">
+                <div class="email-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="notification-group">
+                    <input type="checkbox" id="notification">
+                    <label for="notification">I would like to receive email notification when MindQuest app is out *</label>
+                </div>
+                <button type="submit" class="confirm-button">Join Wishlist</button>
+            </form>
+
+            <div class="divider-group">
+                <hr>
+                <span>Please <strong>sign in</strong> to get access to online study resources via</span>
+                <hr>
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>

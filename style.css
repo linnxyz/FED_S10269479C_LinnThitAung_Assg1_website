@@ -1,171 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Lexend&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
+html, body {
     margin: 0;
+    font-family: 'Nato Sans', sans-serif;
 }
 
-body {
-    color: white;
-    background-color: #17181F;
-    font-family: "Lexend", sans-serif;
+h1 {
+    font-family: 'Koulen', sans-serif;
 }
 
-.navbar {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    background-color: #1E1F27;
+.wishlist-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.3vw 4vw;
-    border-radius: 10px;
-    z-index: 1000;
-}
-
-.navbar-logo {
-    font-size: 2vw;
-    font-weight: bold;
-}
-
-.navbar-links {
-    display: flex;
-    font-size: 1.5vw;
-    gap: 2vw;
-}
-
-.navbar-links a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: color 0.3s ease;
-}
-
-.navbar-links a:hover {
-    color: #7871F2;
-}
-
-.first {
-    margin-top: 8vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-}
-
-.hero {
-    display: flex;
-    flex-direction: row;
+    gap: clamp(1rem, 5vw, 3rem);
     justify-content: center;
-    margin-top: 2.5vw;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+
+    background-color: #F8F9FF;
 }
 
-.description {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.description p {
-    text-align: left;
-    line-height: 2vw;
-    font-size: 1.2vw;
-    margin-bottom: 3vw;
-}
-
-.description a {
-    background-color: #FF8181;
-    padding: 1.5vw;
-    font-size: 1.5vw;
-    text-decoration: none;
-    color: white;
-    border-radius: 150px;
-}
-
-.unlock-your {
-    font-size: 11vw;
-    width: 100%;
-    font-family: "Lilita One", "Helvetica Neue", Helvetica, Arial;
-}
-
-.mind {
-    font-family: "Lilita One", "Helvetica Neue", Helvetica, Arial;
-    font-size: 8vw;
-    padding: 1.5vw 3.5vw;
-    background-color: #7871F2;
-    border-radius: 150px;
-}
-
-.brain-learn-img {
-    width: 40vw;
+.wishlist-section img {
+    width: min(35vw, 500px);
     height: auto;
 }
 
-.topic-container {
+.wishlist-content {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2vw;
-    padding: 10vw 10vw;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 2rem);
+    max-width: 600px;
 
+    color: #142261;
 }
 
-.topic-container div {
-    width: calc(20% - 2vw);
-    height: 4.5vw;
+
+.wishlist-title h1 {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    margin: 0;
+}
+
+.wishlist-title p {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    margin: 0;
+}
+
+.wishlist-form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1.5vw
+}
+
+.email-group label {
+    display: block;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    margin-bottom: 0.5rem;
+}
+
+#email {
+    width: 93%;
+    height: 35px;
+    padding: 0 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.notification-group {
+    display: flex;
+    gap: 0.5rem;
     align-items: center;
-    border: 2px solid #7871F2;
-    font-size: 1.7vw;
-    border-radius: 100px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
-.topic-container div:nth-child(1) { /* Computing */
-    border-color: #69E4FF;
-    color: #3498db;
+.confirm-button {
+    height: 40px;
+    background-color: #6762FF;
+    color: white;
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.topic-container div:nth-child(2) { /* Mathematics */
-    border-color: #73FF88;
-    color: #73FF88;
+.confirm-button:hover {
+    background-color: #5f5bda;
 }
 
-
-.topic-container div:nth-child(3) { /* Geography */
-    border-color: #FF6F6F;
-    color: #FF6F6F;
-}
-
-.topic-container div:nth-child(4) { /* Chemistry */
-    border-color: #FFBF65;
-    color: #FFBF65;
-}
-
-.topic-container div:nth-child(5) { /* Biology */
-    border-color: #D183FF;
-    color: #D183FF;
-}
-
-.topic-container div:nth-child(6) { /* More */
-    border-color: #FFFB8C;
-    color: #FFFB8C;
-}
-
-.topic-container div:nth-child(7) { /* More */
-    border-color: #ffffff;
-    color: #ffffff;
-}
-
-.numbers-container {
+.divider-group {
     display: flex;
-    justify-content: center;
-    text-align: center;
+    gap: 1vw;
 
-    padding: 5vw 5vw;
-    gap: 10vw;
-    font-size: 3vw;
+    font-size: 1.1vw;
 }
 
-.numbers-container div span {
-    font-size: 5vw;
+.divider-group hr {
+    border: none;
+    background-color: rgb(165, 165, 165);
+    margin-left: 0;
+    margin-right: 0;
+    width: 2.5vw;
+    height: 1px;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .wishlist-section {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .wishlist-section img {
+        width: min(100%, 400px);
+    }
+
+    .wishlist-content {
+        width: 100%;
+    }
+
+    #email {
+        width: 100%;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .wishlist-section {
+        padding: 1rem;
+    }
+
+    .notification-group {
+        font-size: 0.9rem;
+    }
+}
+
+/* For landscape orientation on mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    .wishlist-section {
+        min-height: auto;
+        padding: 2rem;
+    }
 }
