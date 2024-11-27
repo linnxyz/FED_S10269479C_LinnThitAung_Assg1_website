@@ -1,0 +1,27 @@
+{
+    "ai": [
+      { "title": "ChatGPT", "description": "An AI assistant for answering questions and generating content.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Grammarly", "description": "AI-powered writing assistant to improve your grammar and style.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Quillbot", "description": "A paraphrasing tool for improving your writing skills.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Jasper AI", "description": "AI for marketing content creation and optimization.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Notion AI", "description": "Boost productivity by integrating AI into your Notion workflow.", "image": "https://via.placeholder.com/200x120" }
+    ],
+    "papers": [
+      { "title": "Past Exam Papers", "description": "Access free past exam papers for various subjects.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Research Articles", "description": "Find credible research articles for your projects and essays.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Preprint Archive", "description": "Access the latest preprint research for free.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Google Scholar", "description": "Find scholarly papers and books online.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "ERIC", "description": "An online library of education research and information.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "ERIC", "description": "An online library of education research and information.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "ERIC", "description": "An online library of education research and information.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "ERIC", "description": "An online library of education research and information.", "image": "https://via.placeholder.com/200x120" }
+    ],
+    "tutorials": [
+      { "title": "Khan Academy", "description": "Free world-class education on a wide range of topics.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Codecademy", "description": "Interactive coding tutorials for beginners and professionals.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Coursera", "description": "Learn anything with online courses from top universities.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "edX", "description": "Free online courses from top universities.", "image": "https://via.placeholder.com/200x120" },
+      { "title": "Pluralsight", "description": "Tech training for software development and IT professionals.", "image": "https://via.placeholder.com/200x120" }
+    ]
+  }
+  

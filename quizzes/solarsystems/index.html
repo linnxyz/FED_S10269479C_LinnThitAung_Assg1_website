@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Journey</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screen {
+            opacity: 0;
+            transform: translateX(50px);
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            padding: 40px;
+            transition: all 0.5s ease;
+            pointer-events: none;
+        }
+
+        .screen.active {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+            pointer-events: all;
+        }
+
+        .welcome-screen, .info-screen, .thank-you-screen {
+            text-align: center;
+        }
+
+        .welcome-screen h1, .info-screen h1, .thank-you-screen h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .welcome-screen p, .info-screen p, .thank-you-screen p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .progress-bar {
+            height: 5px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: #667eea;
+            transition: width 0.3s ease;
+        }
+
+        .question {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+        }
+
+        .question h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .options {
+            display: grid;
+            gap: 10px;
+        }
+
+        .option {
+            padding: 15px 20px;
+            background: #f5f5f5;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            background: #eef2ff;
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .option.selected {
+            background: #667eea;
+            border-color: #667eea;
+            color: white;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: #5a6fd6;
+            transform: translateY(-2px);
+        }
+
+        .btn.disabled {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .results {
+            text-align: center;
+        }
+
+        .score {
+            font-size: 3rem;
+            color: #667eea;
+            margin: 20px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #eef2ff;
+            color: #667eea;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            .screen {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .option {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-screen screen active">
+            <h1>Welcome to the Knowledge Quest! 🌟</h1>
+            <p>Get ready to embark on an exciting journey through various topics. This quiz will test your knowledge about general knowledge, science, and history.</p>
+            <button class="btn" onclick="showScreen('info')">Begin Journey</button>
+        </div>
+
+        <div class="info-screen screen">
+            <h1>Before We Start... 📝</h1>
+            <p>Here's what you need to know:</p>
+            <ul style="text-align: left; margin-bottom: 20px; line-height: 1.6;">
+                <li>5 exciting questions await you</li>
+                <li>Each question has 4 options</li>
+                <li>Select your answer and click Next</li>
+                <li>Your final score will be revealed at the end</li>
+            </ul>
+            <p>Are you ready to begin?</p>
+            <button class="btn" onclick="showScreen('quiz')">Start Quiz</button>
+        </div>
+
+        <div class="quiz-screen screen">
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+            </div>
+            <div class="question">
+                <h2 id="question-text"></h2>
+                <div class="options" id="options-container"></div>
+                <button class="btn disabled" id="next-btn">Next Question</button>
+            </div>
+        </div>
+
+        <div class="results-screen screen">
+            <h1>Quiz Complete! 🎉</h1>
+            <div class="badge">Your Score</div>
+            <div class="score">0/5</div>
+            <p class="feedback"></p>
+            <button class="btn" onclick="restartQuiz()">Try Again</button>
+        </div>
+
+        <div class="thank-you-screen screen">
+            <h1>Thank You for Participating! 🌟</h1>
+            <p>We hope you enjoyed testing your knowledge with us. Your curiosity and willingness to learn are admirable!</p>
+            <div class="badge" style="margin: 20px 0;">Your Achievement</div>
+            <p class="final-message" style="margin-bottom: 20px;"></p>
+            <button class="btn" onclick="restartJourney()">Start New Journey</button>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What is the capital of France?",
+                options: ["London", "Berlin", "Paris", "Madrid"],
+                correct: 2
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                options: ["Venus", "Mars", "Jupiter", "Saturn"],
+                correct: 1
+            },
+            {
+                question: "What is the largest mammal in the world?",
+                options: ["African Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
+                correct: 1
+            },
+            {
+                question: "Which element has the chemical symbol 'O'?",
+                options: ["Gold", "Silver", "Oxygen", "Iron"],
+                correct: 2
+            },
+            {
+                question: "Who painted the Mona Lisa?",
+                options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
+                correct: 2
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedOption = null;
+
+        function showScreen(screenName) {
+            document.querySelectorAll('.screen').forEach(screen => {
+                screen.classList.remove('active');
+            });
+            
+            if (screenName === 'quiz') {
+                document.querySelector('.quiz-screen').classList.add('active');
+                showQuestion();
+            } else {
+                document.querySelector(`.${screenName}-screen`).classList.add('active');
+            }
+        }
+
+        function showQuestion() {
+            selectedOption = null;
+            const nextBtn = document.getElementById('next-btn');
+            nextBtn.classList.add('disabled');
+            
+            const question = questions[currentQuestion];
+            document.getElementById('question-text').textContent = question.question;
+            
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            question.options.forEach((option, index) => {
+                const button = document.createElement('div');
+                button.className = 'option';
+                button.textContent = option;
+                button.addEventListener('click', () => selectOption(index));
+                optionsContainer.appendChild(button);
+            });
+
+            document.querySelector('.progress').style.width = 
+                `${(currentQuestion / questions.length) * 100}%`;
+        }
+
+        function selectOption(index) {
+            selectedOption = index;
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => option.classList.remove('selected'));
+            options[index].classList.add('selected');
+            document.getElementById('next-btn').classList.remove('disabled');
+        }
+
+        document.getElementById('next-btn').addEventListener('click', () => {
+            if(selectedOption !== null) {
+                if(selectedOption === questions[currentQuestion].correct) {
+                    score++;
+                }
+                
+                currentQuestion++;
+                
+                if(currentQuestion < questions.length) {
+                    showQuestion();
+                } else {
+                    showResults();
+                }
+            }
+        });
+
+        function showResults() {
+            document.querySelector('.results-screen').classList.add('active');
+            document.querySelector('.quiz-screen').classList.remove('active');
+            
+            const scoreElement = document.querySelector('.score');
+            const feedbackElement = document.querySelector('.feedback');
+            
+            scoreElement.textContent = `${score}/${questions.length}`;
+            
+            if(score === questions.length) {
+                feedbackElement.textContent = "Perfect score! You're a genius! 🎉";
+            } else if(score >= questions.length * 0.7) {
+                feedbackElement.textContent = "Great job! You really know your stuff! 👏";
+            } else if(score >= questions.length * 0.5) {
+                feedbackElement.textContent = "Good effort! Keep learning! 💪";
+            } else {
+                feedbackElement.textContent = "Don't give up! Every attempt is a learning opportunity! 📚";
+            }
+
+            setTimeout(() => {
+                showFinalScreen();
+            }, 3000);
+        }
+
+        function showFinalScreen() {
+            document.querySelector('.results-screen').classList.remove('active');
+            document.querySelector('.thank-you-screen').classList.add('active');
+            
+            const finalMessage = document.querySelector('.final-message');
+            if(score === questions.length) {
+                finalMessage.textContent = "Master of Knowledge 🏆";
+            } else if(score >= questions.length * 0.7) {
+                finalMessage.textContent = "Knowledge Seeker 🌟";
+            } else if(score >= questions.length * 0.5) {
+                finalMessage.textContent = "Learning Explorer 🚀";
+            } else {
+                finalMessage.textContent = "Brave Adventurer ⭐";
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            showScreen('quiz');
+        }
+
+        function restartJourney() {
+            currentQuestion = 0;
+            score = 0;
+            showScreen('welcome');
+        }
+    </script>
+</body>
+</html>

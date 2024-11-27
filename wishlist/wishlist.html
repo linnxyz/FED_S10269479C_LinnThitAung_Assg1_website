@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindQuest - Transform Your Learning Journey</title>
+    <link rel="stylesheet" href="wl-style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="progress-container" id="pg">
+      <div class="progress-bar">
+        <div class="progress" style="width: 20%"></div>
+      </div>
+      <button class="back-button" onclick="previousStep()" style="display: none">
+        ← Back
+      </button>
+      <div class="step-indicator">Step <span id="currentStep">1</span> of 5</div>
+    </div>
+    
+
+    <!-- Steps from before, with text-align: center -->
+    <!-- Welcome Step -->
+    <div class="step active" id="step1">
+      <div class="lottie-container">
+        <lottie-player src="https://lottie.host/5fbf04b7-f808-407b-a41a-e352b06b08a0/hL2PHjfskr.json" background="##fff" speed="1" style="width: 300px; height: 300px;" loop autoplay direction="1" mode="normal"></lottie-player>
+      </div>
+      <h1>Welcome to MindQuest! 🎉</h1>
+      <p>Help us finish a short survey first so that we can reach more students like you to learn, grow and achieve their goals with us!</p>
+      <button onclick="nextStep(1)">Get Started</button>
+    </div>
+
+    <!-- Questions steps (same as before) -->
+    <!-- ... Copy your existing steps here ... -->
+     <!-- How did you find us -->
+    <div class="step" id="step2">
+        <h1>How did you find MindQuest?</h1>
+        <p>Select all that apply</p>
+        <div class="options">
+          <div class="option">
+            <input type="checkbox" id="source1">
+            <label for="source1">Social Media</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="source2">
+            <label for="source2">Friend Recommendation</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="source3">
+            <label for="source3">Search Engine</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="source4">
+            <label for="source4">School/University</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="source5">
+            <label for="source5">Other</label>
+          </div>
+        </div>
+        <button onclick="nextStep(2)">Next</button>
+      </div>
+  
+      <!-- What interests you -->
+      <div class="step" id="step3">
+        <h1>What interests you most about MindQuest?</h1>
+        <p>Select all that apply</p>
+        <div class="options">
+          <div class="option">
+            <input type="checkbox" id="interest1">
+            <label for="interest1">Interactive Learning Experience</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="interest2">
+            <label for="interest2">Study Progress Tracking</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="interest3">
+            <label for="interest3">Community Features</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="interest4">
+            <label for="interest4">Practice Quizzes</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="interest5">
+            <label for="interest5">Personal Study Planning</label>
+          </div>
+        </div>
+        <button onclick="nextStep(3)">Next</button>
+      </div>
+  
+      <!-- Current challenges -->
+      <div class="step" id="step4">
+        <h1>What's your biggest learning challenge?</h1>
+        <p>Select all that apply</p>
+        <div class="options">
+          <div class="option">
+            <input type="checkbox" id="challenge1">
+            <label for="challenge1">Staying Motivated</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="challenge2">
+            <label for="challenge2">Time Management</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="challenge3">
+            <label for="challenge3">Understanding Complex Topics</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="challenge4">
+            <label for="challenge4">Finding Good Study Resources</label>
+          </div>
+          <div class="option">
+            <input type="checkbox" id="challenge5">
+            <label for="challenge5">Maintaining Focus</label>
+          </div>
+        </div>
+        <button onclick="nextStep(4)">Next</button>
+      </div>
+
+      
+  
+      <!-- Email Step -->
+      <div class="step" id="step5">
+        <h1>Almost there!</h1>
+        <p>Enter your email to join the waitlist. We'll notify you as soon as MindQuest is ready!</p>
+        <input type="email" id="email" placeholder="Your email address" required>
+        <button onclick="submitForm()">Join Waitlist</button>
+      </div>
+
+    <!-- Loading Screen -->
+    <div class="step" id="loading">
+      <h1>loading</h1>
+      <div class="loading-screen">
+        <div class="loader"></div>
+        <p>Processing your submission...</p>
+      </div>
+    </div>
+
+    <!-- Success Step -->
+    <div class="step" id="step6">
+      <div class="success-message">
+        <h1>Thank you for joining! 🎉</h1>
+        <p>We're excited to have you on board! We'll notify you when MindQuest is ready to transform your learning journey.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="wl-script.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+</body>
+</html>
