@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    background-color: #f5f9ff;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #2c97df;
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(20, 34, 97, 0.08);
+}
+
+h1 {
+    color: #142261;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.form-description {
+    color: #64748b;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #142261;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: #142261;
+    background: #fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #2c97df;
+    box-shadow: 0 0 0 4px rgba(44, 151, 223, 0.1);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.tag-section {
+    margin-bottom: 1.5rem;
+}
+
+.tag-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0.5rem;
+}
+
+.tag-checkbox {
+    display: none;
+}
+
+.tag-label {
+    background: #f8fafc;
+    padding: 10px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.tag-checkbox:checked + .tag-label {
+    border: 1px solid #2c97df;
+    background-color: #f0f9ff;
+}
+
+button[type="submit"] {
+    background: #2c97df;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background: #142261;
+    transform: translateY(-2px);
+}
+
+.required {
+    color: #ef4444;
+    margin-left: 4px;
+}
+
+/* Thank you message screen */
+.thank-you-screen {
+    display: none;
+    text-align: center;
+    padding: 3rem;
+}
+
+.thank-you-screen.active {
+    display: block;
+}
+
+.thank-you-screen h2 {
+    color: #142261;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.thank-you-screen p {
+    color: #64748b;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.check-icon {
+    width: 80px;
+    height: 80px;
+    background: #ecfdf5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    color: #059669;
+    font-size: 2rem;
+}
+
+#mainForm.hidden {
+    display: none;
+}

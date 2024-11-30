@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindQuest - Transform Your Learning Journey</title>
+    <link rel="icon" type="image/x-icon" href="../images/mq.png">
     <link rel="stylesheet" href="wl-style.css">
 </head>
 <body>
@@ -119,8 +120,6 @@
         <button onclick="nextStep(4)">Next</button>
       </div>
 
-      
-  
       <!-- Email Step -->
       <div class="step" id="step5">
         <h1>Almost there!</h1>
@@ -131,11 +130,7 @@
 
     <!-- Loading Screen -->
     <div class="step" id="loading">
-      <h1>loading</h1>
-      <div class="loading-screen">
-        <div class="loader"></div>
-        <p>Processing your submission...</p>
-      </div>
+      <lottie-player src="https://lottie.host/ec7e6ab5-ac0c-4fab-ba4b-e31f860bd4b1/5ZHQ0r12DZ.json" background="##ffffff" speed="1" style="margin-left: 20vh; width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
     </div>
 
     <!-- Success Step -->
@@ -143,6 +138,7 @@
       <div class="success-message">
         <h1>Thank you for joining! 🎉</h1>
         <p>We're excited to have you on board! We'll notify you when MindQuest is ready to transform your learning journey.</p>
+        <button onclick="window.location.href='../resources/resources.html'">Proceed to resources</button>
       </div>
     </div>
   </div>

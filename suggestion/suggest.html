@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggest a Resource - MindQuest</title>
+    <link rel="stylesheet" href="suggest.css">
+</head>
+<body>
+    <a href="../resources/resources.html" class="back-button">
+        ← Back to Resources
+    </a>
+    <div class="form-container">
+        <div id="mainForm">
+            <h1>Suggest a Resource 📖</h1>
+            <p class="form-description">
+                Know a great tool or resource that could help other students? Share it with us! We'll review your suggestion and add it to our collection if it meets our criteria.
+            </p>
+
+            <form id="resourceForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="resourceName">Resource Name<span class="required">*</span></label>
+                    <input type="text" id="resourceName" name="resourceName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="resourceUrl">Resource URL<span class="required">*</span></label>
+                    <input type="url" id="resourceUrl" name="resourceUrl" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category<span class="required">*</span></label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category</option>
+                        <option value="ai">AI Tools</option>
+                        <option value="tools">Tools</option>
+                        <option value="student-deals">Student Deals</option>
+                        <option value="productivity">Productivity Apps</option>
+                    </select>
+                </div>
+
+                <div class="tag-section">
+                    <label>Tags (Select all that apply)</label>
+                    <div class="tag-options">
+                        <input type="checkbox" id="tag1" name="tags" value="productivity" class="tag-checkbox">
+                        <label for="tag1" class="tag-label">Productivity</label>
+
+                        <input type="checkbox" id="tag2" name="tags" value="education" class="tag-checkbox">
+                        <label for="tag2" class="tag-label">Education</label>
+
+                        <input type="checkbox" id="tag3" name="tags" value="ai" class="tag-checkbox">
+                        <label for="tag3" class="tag-label">AI</label>
+
+                        <input type="checkbox" id="tag4" name="tags" value="creativity" class="tag-checkbox">
+                        <label for="tag4" class="tag-label">Creativity</label>
+
+                        <input type="checkbox" id="tag5" name="tags" value="study" class="tag-checkbox">
+                        <label for="tag5" class="tag-label">Study</label>
+
+                        <input type="checkbox" id="tag6" name="tags" value="design" class="tag-checkbox">
+                        <label for="tag6" class="tag-label">Design</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Why do you recommend this resource?<span class="required">*</span></label>
+                    <textarea id="description" name="description" required 
+                        placeholder="Please share your experience with this resource and how it has helped you..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Your Name<span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <button type="submit">Submit Resource</button>
+            </form>
+        </div>
+
+        <div id="thankYouScreen" class="thank-you-screen">
+            <div class="check-icon">✓</div>
+            <h2>Thank You!</h2>
+            <p>Your resource suggestion has been submitted successfully. We'll review it and get back to you soon via email.</p>
+        </div>
+    </div>
+
+    <script src="style.js"></script>
+</body>
+</html>

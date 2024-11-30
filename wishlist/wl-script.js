@@ -25,7 +25,6 @@ function previousStep() {
   updateProgress();
   document.getElementById(`step${currentStepNumber}`).classList.add('active');
 }
-
 function submitForm() {
   const email = document.getElementById('email').value;
   if (email && email.includes('@')) {
@@ -46,7 +45,6 @@ function submitForm() {
     alert('Please enter a valid email address');
   }
 }
-
 document.querySelectorAll('.option').forEach(option => {
   option.addEventListener('click', () => {
     const checkbox = option.querySelector('input[type="checkbox"]');
@@ -54,3 +52,4 @@ document.querySelectorAll('.option').forEach(option => {
     option.classList.toggle('selected', checkbox.checked);
   });
 });
+
