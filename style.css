@@ -257,8 +257,6 @@ section {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: linear-gradient(to right, #2facff, #9f7aea);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
   
 .section-subtitle {

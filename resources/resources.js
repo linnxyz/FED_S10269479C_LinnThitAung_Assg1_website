@@ -38,9 +38,9 @@ async function loadContent(category) {
             <img src="${item.image}" alt="${item.title}">
             <div class="details">
               <div class="item-title">
-                <a href="${item.url}" style="text-decoration: none"><h3>${item.title}</h3></a>
+                <a href="${item.url}" style="text-decoration: none" target="_blank"><h3>${item.title}</h3></a>
                 
-                <a href="${item.url}"><img src="../images/arrow.png"></a>
+                <a href="${item.url}" target="_blank"><img src="../images/arrow.png"></a>
               </div>
               <p>${item.description}</p>
               <div class="tags">
