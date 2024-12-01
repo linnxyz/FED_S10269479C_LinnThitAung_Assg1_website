@@ -1,5 +1,5 @@
-const CLIENT_ID = '5a93d90732c047c9a80448fb7812c212'; // Your actual client ID from Spotify
-const CLIENT_SECRET = '068f02a5d23e4489ab8b19a3035bd047'; // YOur actual client secret from Spotify
+const CLIENT_ID = 'YOUR_ID_HERE'; // Your actual client ID from Spotify
+const CLIENT_SECRET = 'YOUR_SECRET_HERE'; // YOur actual client secret from Spotify
 let accessToken = '';
 
 async function getAccessToken() {

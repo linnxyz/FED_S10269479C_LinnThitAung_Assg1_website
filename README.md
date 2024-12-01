@@ -145,7 +145,6 @@ The initial Figma design file for this design can be viewed [here](https://www.f
     - **Description**: Test that the AI can handle casual or non-study-related queries in a conversational manner.  
     - **Input**: "What's the weather like today?"  
     - **Expected Result**: The AI should respond with a polite and friendly response, acknowledging the question without providing study content.
-  
 
 ## Credits
 ### Media
