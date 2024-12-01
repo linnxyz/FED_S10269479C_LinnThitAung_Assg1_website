@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jua&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nato Sans', sans-serif;
+    font-family: 'Fredoka','Nato Sans';
 }
 
 body {
@@ -23,21 +23,59 @@ nav {
     height: 70px;
 }
 
-nav h1 {
-    padding-left: 50px;
+/* Burger Menu Styles - Updated for visibility */
+.burger-menu {
+    display: none;
+    align-content: center;
+    margin-right: 2rem;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px #E1E1E1 solid;
+    background-color: #ffffff;
+    z-index: 1000;
+    height: 70px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+  
+}
+
+.logo-container img {
+    width: 170px;
+    height: auto;
 }
 
 .nav-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0;
     height: 100%;
 }
 
 .nav-btn a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
     font-size: 1rem;
     margin: 0 2rem;
     transition: all 0.3s ease;
@@ -45,13 +83,23 @@ nav h1 {
     border-radius: 4px;
 }
 
-.nav-btn a:hover {
-    color: #FFD700;
-    background-color: rgba(255, 215, 0, 0.1);
+.nav-btn {
+    color: rgb(0, 0, 0);
 }
 
-nav a {
-    text-decoration: none;
+.btn:hover {
+    color: #2c97df;
+}
+
+.ai-btn {
+    color: #272727;
+    background: linear-gradient(to right, #f1c1ff, #c1ffc6);
+    
+}
+
+.ai-btn:hover {
+    background: linear-gradient(to right, #fed4ff, #e7ffc0);
+    color: #161616;
 }
 
 .container {
@@ -67,6 +115,7 @@ header {
 
 h1 {
     font-size: 2.5rem;
+    font-weight: 500;
     margin-bottom: 1rem;
 }
 
@@ -157,4 +206,49 @@ h1 {
     text-align: center;
     padding: 2rem;
     display: none;
+}
+
+/* Media Query - Show burger on mobile */
+@media screen and (max-width: 1000px) {
+    .burger-menu {
+        display: block;  /* Changed from 'flex' to 'block' */
+        position: relative;
+        z-index: 1001;
+    }
+
+    .nav-btn {
+        position: fixed;
+        top: 70px;
+        right: -100%;  /* Changed from left to right */
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: right 0.3s ease;  /* Changed from left to right */
+    }
+
+    .nav-btn.active {
+        right: 0;  /* Changed from left to right */
+    }
+
+    .nav-btn a {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
+
+    /* Animate burger menu */
+    .burger-menu.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }

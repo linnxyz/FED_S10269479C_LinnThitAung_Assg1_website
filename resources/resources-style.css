@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jua&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jua&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 body {
@@ -78,10 +78,6 @@ nav {
     border-radius: 4px;
 }
 
-.nav-btn {
-    color: rgb(0, 0, 0);
-}
-
 .btn:hover {
     color: #2c97df;
 }
@@ -125,7 +121,7 @@ nav {
 }
 
 .sidebar li {
-    padding: 20px 20px;
+    padding: 25px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -135,10 +131,9 @@ nav {
 }
 
 .suggest {
-    background-color: rgb(240, 240, 240);
     padding: 20px 20px;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 140, 255);
 }
 
 .content {

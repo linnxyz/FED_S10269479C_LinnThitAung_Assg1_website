@@ -3,13 +3,93 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f0f0f0;
 }
+
+/* Burger Menu Styles - Updated for visibility */
+.burger-menu {
+    display: none;
+    align-content: center;
+    
+    margin-right: 2rem;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px #E1E1E1 solid;
+    background-color: #ffffff;
+    z-index: 1000;
+    height: 70px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+  
+}
+
+.logo-container img {
+    width: 170px;
+    height: auto;
+}
+
+.nav-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+.nav-btn a {
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 0 2rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-btn {
+    color: rgb(0, 0, 0);
+}
+
+.btn:hover {
+    color: #2c97df;
+}
+
+.ai-btn {
+    color: #272727;
+    background: linear-gradient(to right, #f1c1ff, #c1ffc6);
+    
+}
+
+.ai-btn:hover {
+    background: linear-gradient(to right, #fed4ff, #e7ffc0);
+    color: #161616;
+}
+
 #chat-container {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     height: 600px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -45,10 +125,55 @@ body {
     margin-right: 10px;
 }
 #message-input button {
-    background-color: #4CAF50;
+    background-color: #687fff;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Media Query - Show burger on mobile */
+@media screen and (max-width: 1000px) {
+    .burger-menu {
+        display: block;  /* Changed from 'flex' to 'block' */
+        position: relative;
+        z-index: 1001;
+    }
+
+    .nav-btn {
+        position: fixed;
+        top: 70px;
+        right: -100%;  /* Changed from left to right */
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: right 0.3s ease;  /* Changed from left to right */
+    }
+
+    .nav-btn.active {
+        right: 0;  /* Changed from left to right */
+    }
+
+    .nav-btn a {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
+
+    /* Animate burger menu */
+    .burger-menu.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }

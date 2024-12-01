@@ -16,10 +16,29 @@ body {
     color: #1e293b;
 }
 
+/* Burger Menu Styles - Updated for visibility */
+.burger-menu {
+    display: none;
+    align-content: center;
+    
+    margin-right: 2rem;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
 nav {
     position: fixed;
     display: flex;
-    gap: 600px;
+    justify-content: space-between;
+    gap: 50px;
     top: 0;
     left: 0;
     width: 100%;
@@ -45,13 +64,12 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0;
     height: 100%;
 }
 
 .nav-btn a {
     text-decoration: none;
-    
     font-size: 1rem;
     margin: 0 2rem;
     transition: all 0.3s ease;
@@ -355,5 +373,50 @@ nav {
 
     .completion-container {
         padding: 1.5rem;
+    }
+}
+
+/* Media Query - Show burger on mobile */
+@media screen and (max-width: 1000px) {
+    .burger-menu {
+        display: block;  /* Changed from 'flex' to 'block' */
+        position: relative;
+        z-index: 1001;
+    }
+
+    .nav-btn {
+        position: fixed;
+        top: 70px;
+        right: -100%;  /* Changed from left to right */
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: right 0.3s ease;  /* Changed from left to right */
+    }
+
+    .nav-btn.active {
+        right: 0;  /* Changed from left to right */
+    }
+
+    .nav-btn a {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
+
+    /* Animate burger menu */
+    .burger-menu.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }

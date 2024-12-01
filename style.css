@@ -41,7 +41,7 @@ nav {
 }
   
 .nav-link {
-    color: #1f1f1f;
+    color: #000000;
     text-decoration: none;
     font-weight: 500;
     font-size: 15px;
@@ -63,8 +63,6 @@ section {
     height: 100vh;
     display: flex;
     justify-content: center;
-    padding-left: 19rem;
-    padding-right: 19rem;
 }
 
 .hero {
@@ -77,6 +75,7 @@ section {
     justify-content: center;
     align-items: center;
     padding: 0;
+    width: 100%;
     margin-top: 100px;
     gap: 60px;
 }
@@ -538,15 +537,11 @@ section {
 
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;
+    height: 130vh;
   }
 
   .hero-content {
     flex-direction: column;
-  }
-
-  .hero-content lottie-player{
-    display: none;
   }
 
   .texts {
@@ -582,7 +577,7 @@ section {
 
 @media (max-width: 640px) {
   .features-section {
-    height: 150vh;
+    height: 140vh;
   }
   .features-grid {
     grid-template-columns: 1fr;
@@ -590,31 +585,45 @@ section {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
+  .nav-links {
+    display: none !important;
 
-  .hero-content {
-    width: 80%;
   }
 
-  .texts {
-    gap: 1vw;
-  }
-
-  .texts h1 {
-    font-size: 4vw;
-  }
-
-  .btn-b {
-    font-size: 2vw;
-    width: 20vw;
-    height: 2vw;
-  }
-
-  .btn-w {
-    font-size: 2vw;
-    width: 20vw;
-    height: 2vw;
+  .nav {
+    display: flex;
+    justify-content: center;
   }
 }
+
+@media (max-width: 500px) {
+  .texts {
+    width: 70vw;
+  }
+  .texts h1 {
+    text-align: center;
+    
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .learn-content p {
+    width: 70vw;
+  }
+  .features-section {
+    height: 150vh;
+  }
+}
+
+@media (max-width: 420px) {
+  .features-section {
+    height: 80%;
+  }
+} 
+
+
+
+
 
   
