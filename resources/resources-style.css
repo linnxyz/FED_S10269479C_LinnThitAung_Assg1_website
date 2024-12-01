@@ -298,16 +298,15 @@ nav {
     .sidebar {
         display: block;
     }
-}
-
-
-.content {
-    transition: margin-left 0.3s ease;
+    .content {
+        transition: margin-left 0.3s ease;
+    }
 }
 
 @media screen and (min-width: 769px) {
     .content {
         margin-left: 250px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -351,5 +350,4 @@ nav {
     .burger-menu.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-}
 }

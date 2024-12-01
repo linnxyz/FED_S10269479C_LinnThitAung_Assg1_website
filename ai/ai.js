@@ -1,4 +1,4 @@
-const API_KEY = 'YOUR_API_KEY_HERE'; // Replace with your Gemini API key
+const API_KEY = 'AIzaSyDe_XJ85t_2cQclVh-gTWya6jKUHpwBuoA'; // Replace with your Gemini API key
 const messagesContainer = document.getElementById('chat-messages');
 const userInput = document.getElementById('user-input');
 
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navBtn.classList.remove('active');
         }
     });
-    
+
     // Close menu when clicking on a link
     const navLinks = document.querySelectorAll('.nav-btn a');
     navLinks.forEach(link => {
