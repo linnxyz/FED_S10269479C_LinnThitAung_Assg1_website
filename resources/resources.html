@@ -4,23 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources - MindQuest</title>
-
     <link rel="icon" type="image/x-icon" href="../images/mq.png">
     <link rel="stylesheet" href="resources-style.css">
-
+</head>
 <body class="home">
     <nav>
+        
         <a class="logo-container" href="../index.html">
             <img src="../images/mq-logo.png" alt="MindQuest">
         </a>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="nav-btn">
             <a class="btn" href="#">Resources</a>
-            <a class="btn" href="../quizzes/physicbasics/physic.html">Quizzes</a>
+            <a class="btn" href="../quizzes/quiz.html">Quizzes</a>
             <a class="btn" href="../music/music.html">Music</a>
             <a class="ai-btn" href="../ai/ai.html">MindQuest.Ai</a>
         </div>
     </nav>
 
+    <!-- New dropdown menu for mobile -->
+
+
+    <!-- Existing sidebar -->
     <div class="sidebar">
         <ul>
             <li onclick="loadContent('ai')">Best AI Tools</li>
@@ -31,17 +40,12 @@
         </ul>
         <a class="suggest" href="../suggestion/suggest.html">💡 Suggest a resource</a>
     </div>
-    
+   
     <!-- Content Area -->
     <div class="content" id="content">
-        
     </div>
 
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="mindquest" data-description="Support me on Buy me a coffee!" data-message="🎉 You can support MindQuest by buying us a coffee! Your contribution will help us develop new features to create a better learning experience for students. 🍵 Thank you! " data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-
-
-
-    
     <script src="resources.js"></script>
 </body>
 </html>

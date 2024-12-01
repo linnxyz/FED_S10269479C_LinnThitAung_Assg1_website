@@ -1,13 +1,9 @@
-require('dotenv').config();
-
-
-const API_KEY = process.env.gemini_key; // Replace with your actual API key
+const API_KEY = ''; // Replace with your actual API key
 const messagesContainer = document.getElementById('chat-messages');
 const userInput = document.getElementById('user-input');
 
 // Comprehensive system prompt
 const SYSTEM_PROMPT = `
-
 You are a helpful AI assistant in beta version for MindQuest.
 Your key responsibilities include:
 - You are to answer any questions users ask as accurate as possible
@@ -17,8 +13,7 @@ Your key responsibilities include:
 - Offer guidance on using our website or services
 - Maintain a friendly and supportive tone
 - Your audience are mostly students so use appropriate language
-- If you don't know something, admit it honestly and direct them to
-contact us
+- If you don't know something, admit it honestly and direct them to contact us
 
 Context about the company/website:
 MindQuest is an online platform offering courses, quizzes, and study resources to help students enhance their learning. It provides a variety of subjects and interactive tools to reinforce knowledge, improve academic performance, and support personal growth.

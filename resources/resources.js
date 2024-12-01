@@ -3,7 +3,18 @@ async function loadContent(category) {
   contentDiv.innerHTML = `
     <h1>${category.replace(/^\w/, (c) => c.toUpperCase())}</h1>
     <div class="search-container">
+      <div class="mobile-filters">
+        <select class="filter-dropdown" onchange="loadContent(this.value)">
+            <option value="" disabled selected>Select Category</option>
+            <option value="ai">Best AI Tools</option>
+            <option value="tools">Tools</option>
+            <option value="student Deals">Student Deals</option>
+            <option value="productivity Apps">Productivity Apps</option>
+            <option value="apps">Productivity Apps</option>
+        </select>
+      </div>
       <input type="text" id="searchInput" placeholder="Search with the keyword you need... (eg. content, coding)" class="search-input">
+
     </div>
     <div class="grid"></div>
   `;
@@ -65,4 +76,35 @@ async function loadContent(category) {
 // Automatically load the AI category when the page loads
 window.addEventListener('DOMContentLoaded', () => {
   loadContent('ai');
+});
+
+// Add this JavaScript to your resources.js file
+
+document.addEventListener('DOMContentLoaded', function() {
+  const burgerMenu = document.querySelector('.burger-menu');
+  const navBtn = document.querySelector('.nav-btn');
+
+  burgerMenu.addEventListener('click', function() {
+      burgerMenu.classList.toggle('active');
+      navBtn.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+      if (!event.target.closest('.nav-btn') && 
+          !event.target.closest('.burger-menu') && 
+          navBtn.classList.contains('active')) {
+          burgerMenu.classList.remove('active');
+          navBtn.classList.remove('active');
+      }
+  });
+
+  // Close menu when clicking on a link
+  const navLinks = document.querySelectorAll('.nav-btn a');
+  navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+          burgerMenu.classList.remove('active');
+          navBtn.classList.remove('active');
+      });
+  });
 });

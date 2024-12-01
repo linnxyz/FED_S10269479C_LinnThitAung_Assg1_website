@@ -1,6 +1,6 @@
 // Replace these with your Spotify API credentials
-const CLIENT_ID = '5a93d90732c047c9a80448fb7812c212';
-const CLIENT_SECRET = '91dbfe4bc0be46a4bf8f438dcc615a61';
+const CLIENT_ID = '';
+const CLIENT_SECRET = '';
 
 let accessToken = '';
 

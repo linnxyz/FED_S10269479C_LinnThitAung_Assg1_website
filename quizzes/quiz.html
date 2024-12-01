@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <nav>
+        <a class="logo-container" href="../index.html">
+            <img src="../images/mq-logo.png" alt="MindQuest">
+        </a>
+        <div class="nav-btn">
+            <a class="btn" href="../resources/resources.html">Resources</a>
+            <a class="btn" href="../quizzes/quiz.html">Quizzes</a>
+            <a class="btn" href="../music/music.html">Music</a>
+            <a class="ai-btn" href="../ai/ai.html">MindQuest.Ai</a>
+        </div>
+    </nav>
+    <div class="header">
+        <h1>Quiz Master</h1>
+    </div>
+
+    <!-- Categories View -->
+    <div id="categoriesView">
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search categories...">
+        </div>
+        <div class="categories-grid" id="categoriesGrid"></div>
+    </div>
+
+    <!-- Difficulty Selection View -->
+    <div id="difficultyView" class="hidden">
+        <button class="back-button" onclick="showCategories()">← Back to Categories</button>
+        <div class="difficulty-container">
+            <h2>Select Difficulty</h2>
+            <div class="difficulty-grid">
+                <button class="difficulty-button" onclick="selectDifficulty('easy')">Easy</button>
+                <button class="difficulty-button" onclick="selectDifficulty('medium')">Medium</button>
+                <button class="difficulty-button" onclick="selectDifficulty('hard')">Hard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz View -->
+    <div id="quizView" class="hidden">
+        <button class="back-button" onclick="showCategories()">← Exit Quiz</button>
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <span id="questionNumber"></span>
+                <span id="score"></span>
+            </div>
+            <div class="question-container">
+                <h3 id="question"></h3>
+                <div id="answers"></div>
+                <button id="nextButton" class="next-button" disabled>Next Question</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Completion View -->
+    <div id="completionView" class="hidden">
+        <button class="back-button" onclick="showCategories()">← Back to Categories</button>
+        <div class="completion-container">
+            <h2>Quiz Complete!</h2>
+            <div class="completion-score" id="finalScore"></div>
+            <div class="completion-message" id="completionMessage"></div>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
