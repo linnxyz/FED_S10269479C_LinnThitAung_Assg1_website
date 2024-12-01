@@ -32,6 +32,9 @@ The website is just the beginning. The mobile app will bring the full MindQuest 
 4. Responsive Design
    Ensured usability and consistency across all devices—desktop, tablet, and mobile.
 
+The initial Figma design file for this design can be viewed [here](https://www.figma.com/design/SAZ6O0SVU5z0DLhNuSPxkO/Initial-Project-Design?node-id=0-1&t=424BjaZLTLAzWpgK-1).
+
+
 ## User Stories  
 
 1. **As a student**, I want to take subject-specific quizzes, so that I can test my knowledge and identify areas for improvement.  
@@ -46,17 +49,27 @@ The website is just the beginning. The mobile app will bring the full MindQuest 
 ## Features
 ### Existing Features
 - [x] **User Waitlist for Mobile App**: Allows users to join the waitlist for the upcoming MindQuest mobile app, giving them early access to exclusive updates and features. The waitlist form includes a short survey to better understand how users found out about MindQuest and features they might need, and lastly their email address to notify them when the app is out.  
+  
 - [x] **Study Resources**: Provides curated study resources like AI, Tools, Productivity Apps, Student Deals to help students improve their academic performance and get the best out of their student life.
+
 - [x] **Quizzes**: Provide users to take quizzes on various topics on 3 level of difficulties, pulled from the largest trivia database availible.
+
 - [x] **Music**: A collection of playlists that were made by other students to better focus on the studies. Different type of musics available for users with different preferences.
+
 - [x] **AI-powered Tools**: AI Chat integrated with the most smartest AI out there to answer any questions users might have.
+
 - [x] **Suggestions form**: Allows users to suggest the study resources they find useful that are not yet in MindQuest's database by letting them fill in a form including the resource name, link, description, and their email address.
 
 ### Features Left to Implement
-- []**Progress Tracker:** A feature to allow students to track their academic progress over time, helping them identify areas of strength and areas that need improvement, boosting motivation and focus.
-- []**Playlist Recommendation:** A feature to allow students to recommend their favorite playlists to other students by uploading their playlist links.
-- []**Study Buddy Finder:** Future plans include allowing users to select quiz topics, difficulty levels, and categories for a more tailored trivia experience.
-- []**Knowledge Bar:** A newsfeed type of page that will display latest news, knowledgable facts, and study/general life tips to help users easily learn new things and keep in touch with the world.
+
+- [ ] **Progress Tracker:** A feature to allow students to track their academic progress over time, helping them identify areas of strength and areas that need improvement, boosting motivation and focus.
+
+- [ ] **Playlist Recommendation:** A feature to allow students to recommend their favorite playlists to other students by uploading their playlist links.
+
+- [ ] **Study Buddy Finder:** Future plans include allowing users to select quiz topics, difficulty levels, and categories for a more tailored trivia experience.
+
+- [ ] **Knowledge Bar:** A newsfeed type of page that will display latest news, knowledgable facts, and study/general life tips to help users easily learn new things and keep in touch with the world.
+
 
 ## Technology Used  
 
@@ -65,17 +78,18 @@ The website is just the beginning. The mobile app will bring the full MindQuest 
 
 * **Gemini API for Chat**
   * The Gemini API is used to power the AI chat feature. When a users sends a message, the website sends a POST request to the Gemini API's messaging endpoint, which processes the message and sends it to the intended recipient (the address of the first message sender). Before the POST request, an initial configuration request is sent to the API to tell the AI the situation it's in and how to behave. It looks something like this:
-  '''
+  ```javascript
   const SYSTEM_PROMPT = 
     You are a helpful AI assistant in beta version for MindQuest.
     Your key responsibilities include:
     You are to answer any questions users ask as accurate as possible
     You're main target is to be a smart and creative AI study buddy for students who...
-  '''
+  ```
 
 * **DOM Manipulation from JSON Files**: To display dynamic study resources, JSON files are used to store and manage data. Using DOM manipulation, the platform dynamically load and display quizzes, articles, and other resources. This method ensures that the content is updated efficiently without requiring manual changes to the HTML structure.
 
 * **Lottie Animations**: Lottie animations are used especially in the home page to enhance the user experience with smooth, interactive animations. These lightweight animations are implemented using Lottie files, which are scalable and easy to integrate, adding a visually engaging layer to the platform without compromising performance.
+
 
 ## Testing
 ### 1. **Homepage**
@@ -131,3 +145,15 @@ The website is just the beginning. The mobile app will bring the full MindQuest 
     - **Description**: Test that the AI can handle casual or non-study-related queries in a conversational manner.  
     - **Input**: "What's the weather like today?"  
     - **Expected Result**: The AI should respond with a polite and friendly response, acknowledging the question without providing study content.
+  
+
+## Credits
+### Media
+- The images used in this site were obtained from [Pexels](https://www.pexels.com) and [Google](https://www.google.com).
+- Icons were obtained from [Flaticon](https://www.flaticon.com) and [Figma](https://www.figma.com).
+
+### Acknowledgements
+- The knowledge and skills I gathered to build this website are from [w3schools.com](https://www.w3schools.com), [LinkedIn Learning](https://www.linkedin.com/learning/), and [ChatGPT](https://chat.openai.com) and [Claude](https://claude.ai) for the coding assistance.
+- I received inspirations for this project from [Dribbble](https://dribbble.com) and [Pinterest](https://www.pinterest.com) for the design and layout.
+
+
