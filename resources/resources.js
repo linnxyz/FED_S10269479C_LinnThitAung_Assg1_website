@@ -6,11 +6,11 @@ async function loadContent(category) {
       <div class="mobile-filters">
         <select class="filter-dropdown" onchange="loadContent(this.value)">
             <option value="" disabled selected>Select Category</option>
-            <option value="ai">Best AI Tools</option>
+            <option value="ai">AI</option>
             <option value="tools">Tools</option>
-            <option value="student Deals">Student Deals</option>
             <option value="productivity Apps">Productivity Apps</option>
-            <option value="apps">Productivity Apps</option>
+            <option value="student Deals">Student Deals</option>
+            <option onclick="window.location.href='../suggestion/suggest.html'">Suggest a resource 💡</option>
         </select>
       </div>
       <input type="text" id="searchInput" placeholder="Search with the keyword you need... (eg. content, coding)" class="search-input">

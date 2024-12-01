@@ -1,9 +1,9 @@
 const categories = [
-    { id: 17, name: 'Science & Nature', image: 'https://via.placeholder.com/300x200', description: 'Explore the wonders of our natural world' },
-    { id: 18, name: 'Computing', image: 'https://via.placeholder.com/300x200', description: 'Test your knowledge of computer science' },
-    { id: 19, name: 'Mathematics', image: 'https://via.placeholder.com/300x200', description: 'Challenge yourself with math problems' },
-    { id: 20, name: 'Mythology', image: 'https://via.placeholder.com/300x200', description: 'Discover ancient myths and legends' },
-    { id: 21, name: 'Sports', image: 'https://via.placeholder.com/300x200', description: 'Put your sports knowledge to the test' }
+    { id: 17, name: 'Science & Nature', image: '../images/science.jpg', description: 'Explore the wonders of our natural world' },
+    { id: 18, name: 'Computing', image: '../images/computing.jpg', description: 'Test your knowledge of computer science' },
+    { id: 19, name: 'Mathematics', image: '../images/maths.jpg', description: 'Challenge yourself with math problems' },
+    { id: 20, name: 'Mythology', image: '../images/mythology.jpg', description: 'Discover ancient myths and legends' },
+    { id: 21, name: 'Sports', image: '../images/sports.png', description: 'Put your sports knowledge to the test' }
 ];
 
 let currentCategory = null;
@@ -145,9 +145,6 @@ function showCategories() {
     currentScore = 0;
     selectedAnswer = null;
 }
-
-
-// Add this JavaScript to your resources.js file
 
 document.addEventListener('DOMContentLoaded', function() {
     const burgerMenu = document.querySelector('.burger-menu');

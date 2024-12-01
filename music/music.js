@@ -103,3 +103,34 @@ document.querySelector('.mood-filters').addEventListener('click', (e) => {
 
 // Initial load
 fetchPlaylists();
+
+// Add this JavaScript to your resources.js file
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navBtn = document.querySelector('.nav-btn');
+  
+    burgerMenu.addEventListener('click', function() {
+        burgerMenu.classList.toggle('active');
+        navBtn.classList.toggle('active');
+    });
+  
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.nav-btn') && 
+            !event.target.closest('.burger-menu') && 
+            navBtn.classList.contains('active')) {
+            burgerMenu.classList.remove('active');
+            navBtn.classList.remove('active');
+        }
+    });
+  
+    // Close menu when clicking on a link
+    const navLinks = document.querySelectorAll('.nav-btn a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            burgerMenu.classList.remove('active');
+            navBtn.classList.remove('active');
+        });
+    });
+  });

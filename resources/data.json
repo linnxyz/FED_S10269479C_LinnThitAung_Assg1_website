@@ -12,24 +12,27 @@
     { "title": "Notion AI", "description": "Boosts productivity", "image": "logos/notionai.png", "url": "https://www.notion.com/product/ai", "tags": ["ai", "productivity", "organization"] }
   ],
   "tools": [
-    { "title": "Canva", "description": "Designs graphics", "image": "https://via.placeholder.com/200x120", "url": "https://www.canva.com/", "tags": ["design", "creativity"] },
-    { "title": "Figma", "description": "UI/UX design tool", "image": "https://via.placeholder.com/200x120", "url": "https://www.figma.com/", "tags": ["design", "ui/ux"] },
-    { "title": "Adobe Photoshop", "description": "Edits photos", "image": "https://via.placeholder.com/200x120", "url": "https://www.adobe.com/products/photoshop.html", "tags": ["design", "photo-editing"] },
-    { "title": "Notion", "description": "Organizes notes", "image": "https://via.placeholder.com/200x120", "url": "https://www.notion.so/", "tags": ["productivity", "organization"] },
-    { "title": "Trello", "description": "Manages projects", "image": "https://via.placeholder.com/200x120", "url": "https://trello.com/", "tags": ["productivity", "project-management"] }
-  ],
-  "student Deals": [
-    { "title": "Spotify Premium", "description": "Discounted music", "image": "https://via.placeholder.com/200x120", "url": "https://www.spotify.com/student/", "tags": ["music", "entertainment", "deals"] },
-    { "title": "Apple Music", "description": "Student discount", "image": "https://via.placeholder.com/200x120", "url": "https://www.apple.com/apple-music-student/", "tags": ["music", "entertainment", "deals"] },
-    { "title": "Microsoft Office 365", "description": "Free for students", "image": "https://via.placeholder.com/200x120", "url": "https://www.microsoft.com/en-us/education/products/office", "tags": ["productivity", "education", "deals"] },
-    { "title": "Adobe Creative Cloud", "description": "Discount for students", "image": "https://via.placeholder.com/200x120", "url": "https://www.adobe.com/creativecloud/buy/students.html", "tags": ["design", "creativity", "deals"] },
-    { "title": "Amazon Prime Student", "description": "Free delivery deals", "image": "https://via.placeholder.com/200x120", "url": "https://www.amazon.com/Amazon-Prime-Student/", "tags": ["shopping", "deals"] }
+    { "title": "Canva", "description": "Designs graphics", "image": "logos/canva.png", "url": "https://www.canva.com/", "tags": ["design", "creativity"] },
+    { "title": "Figma", "description": "UI/UX design tool", "image": "logos/figma.png", "url": "https://www.figma.com/", "tags": ["design", "ui/ux"] },
+    { "title": "Adobe Photoshop", "description": "Professional photo editing", "image": "logos/ps.jpg", "url": "https://www.adobe.com/products/photoshop.html", "tags": ["design", "photo editing"] },
+    { "title": "CapCut", "description": "Casual video editing", "image": "logos/capcut.png", "url": "https://www.capcut.com/", "tags": ["design", "video editing"] }
   ],
   "productivity Apps": [
-    { "title": "Todoist", "description": "Tracks tasks", "image": "https://via.placeholder.com/200x120", "url": "https://todoist.com/", "tags": ["productivity", "task-management"] },
-    { "title": "Evernote", "description": "Saves notes", "image": "https://via.placeholder.com/200x120", "url": "https://evernote.com/", "tags": ["productivity", "notes"] },
-    { "title": "Google Calendar", "description": "Schedules events", "image": "https://via.placeholder.com/200x120", "url": "https://calendar.google.com/", "tags": ["productivity", "calendar"] },
-    { "title": "Forest", "description": "Focuses time", "image": "https://via.placeholder.com/200x120", "url": "https://www.forestapp.cc/", "tags": ["productivity", "focus"] },
-    { "title": "RescueTime", "description": "Tracks productivity", "image": "https://via.placeholder.com/200x120", "url": "https://www.rescuetime.com/", "tags": ["productivity", "time-tracking"] }
+    { "title": "Forest", "description": "The award winning focus app", "image": "logos/forest.png", "url": "https://www.forestapp.cc/", "tags": ["productivity", "focus"] },
+    { "title": "Google Calendar", "description": "Schedules events", "image": "logos/googlecalender.png", "url": "https://calendar.google.com/", "tags": ["productivity", "calendar"] },
+    { "title": "Notion", "description": "Organizes tasks and notes", "image": "logos/notion.png", "url": "https://www.notion.so/", "tags": ["productivity", "organization", "note"] },
+    { "title": "Trello", "description": "Best To-Do list", "image": "logos/trello.jpg", "url": "https://trello.com/", "tags": ["productivity", "project-management", "to-do"] },
+    { "title": "Study Stream", "description": "Study together with students on the internet", "image": "logos/studystream.png", "url": "https://www.studystream.live/home", "tags": ["study together", "video call"] },
+    { "title": "Todoist", "description": "Tracks tasks", "image": "logos/todoist.png", "url": "https://todoist.com/", "tags": ["productivity", "task-management"] },
+    { "title": "Evernote", "description": "Saves notes", "image": "logos/evernote.jpg", "url": "https://evernote.com/", "tags": ["productivity", "notes"] }
+    
+    
+  ],
+  "student Deals": [
+    { "title": "Spotify Premium", "description": "Discounted music", "image": "logos/spotify.png", "url": "https://www.spotify.com/student/", "tags": ["music", "entertainment", "deals"] },
+    { "title": "Apple Music", "description": "Student discount", "image": "logos/applemusic.png", "url": "https://www.apple.com/apple-music-student/", "tags": ["music", "entertainment", "deals"] },
+    { "title": "Microsoft Office 365", "description": "Free for students", "image": "logos/office.png", "url": "https://www.microsoft.com/en-us/education/products/office", "tags": ["productivity", "education", "deals"] },
+    { "title": "Adobe Creative Cloud", "description": "Discount for students", "image": "logos/creativecloud.png", "url": "https://www.adobe.com/creativecloud/buy/students.html", "tags": ["design", "creativity", "deals"] },
+    { "title": "Amazon Prime Student", "description": "Free delivery deals", "image": "logos/prime.png", "url": "https://www.amazon.com/Amazon-Prime-Student/", "tags": ["shopping", "deals"] }
   ]
 }

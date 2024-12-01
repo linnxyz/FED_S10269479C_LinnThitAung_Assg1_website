@@ -542,7 +542,9 @@ section {
 
   .hero-content {
     flex-direction: column;
+    gap: 0px;
   }
+
 
   .texts {
     margin-top: 30px;
@@ -617,6 +619,7 @@ section {
 }
 
 @media (max-width: 420px) {
+
   .features-section {
     height: 80%;
   }
