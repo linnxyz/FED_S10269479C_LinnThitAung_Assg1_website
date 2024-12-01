@@ -1,8 +1,7 @@
-const API_KEY = ''; // Replace with your actual API key
+const API_KEY = 'YOUR_API_KEY_HERE'; // Replace with your Gemini API key
 const messagesContainer = document.getElementById('chat-messages');
 const userInput = document.getElementById('user-input');
 
-// Comprehensive system prompt
 const SYSTEM_PROMPT = `
 You are a helpful AI assistant in beta version for MindQuest.
 Your key responsibilities include:
@@ -96,8 +95,7 @@ userInput.addEventListener('keypress', function(event) {
 // Initial welcome message
 addMessage('Hello! How can I assist you today?', 'ai');
 
-// Add this JavaScript to your resources.js file
-
+// Enable burger menu
 document.addEventListener('DOMContentLoaded', function() {
     const burgerMenu = document.querySelector('.burger-menu');
     const navBtn = document.querySelector('.nav-btn');
@@ -116,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navBtn.classList.remove('active');
         }
     });
-  
+    
     // Close menu when clicking on a link
     const navLinks = document.querySelectorAll('.nav-btn a');
     navLinks.forEach(link => {

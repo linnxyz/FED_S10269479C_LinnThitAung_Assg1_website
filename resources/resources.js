@@ -79,8 +79,6 @@ window.addEventListener('DOMContentLoaded', () => {
   loadContent('ai');
 });
 
-// Add this JavaScript to your resources.js file
-
 document.addEventListener('DOMContentLoaded', function() {
   const burgerMenu = document.querySelector('.burger-menu');
   const navBtn = document.querySelector('.nav-btn');

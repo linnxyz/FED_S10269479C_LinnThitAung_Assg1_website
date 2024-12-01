@@ -33,7 +33,6 @@ function submitForm() {
     document.getElementById('step5').classList.remove('active');
     document.getElementById('loading').classList.add('active');
 
-    // Simulate loading time (replace with actual form submission)
     setTimeout(() => {
       document.getElementById('loading').classList.remove('active');
       document.getElementById('step6').classList.add('active');

@@ -231,7 +231,6 @@ nav {
     color: #3b3b3b;
 }
   
-/* Adjust item padding to accommodate tags */
 .item .details {
     padding: 15px;
 }
@@ -248,16 +247,14 @@ nav {
     }
 }
 
-/* Mobile filters styles */
 .mobile-filters {
-    display: none; /* Hidden by default */
+    display: none;
     padding-top: 1rem;
     padding-bottom: 1rem;
     background: #fff;
     position: sticky;
-    top: 70px; /* Adjust based on your nav height */
+    top: 70px;
     z-index: 100;
-
 }
 
 .filter-dropdown {
@@ -278,7 +275,6 @@ nav {
     box-shadow: 0 0 0 2px rgba(47,172,255,0.2);
 }
 
-/* Responsive breakpoints */
 @media screen and (max-width: 768px) {
     .sidebar {
         display: none; /* Hide sidebar on mobile */
@@ -294,37 +290,29 @@ nav {
     }
 }
 
-/* Tablet and larger screens */
 @media screen and (min-width: 769px) {
     .mobile-filters {
-        display: none; /* Hide dropdown on desktop */
+        display: none;
     }
 
     .sidebar {
-        display: block; /* Show sidebar on desktop */
+        display: block;
     }
 }
 
-/* Adjust content area margins */
+
 .content {
     transition: margin-left 0.3s ease;
 }
 
 @media screen and (min-width: 769px) {
     .content {
-        margin-left: 250px; /* Or whatever your sidebar width is */
+        margin-left: 250px;
 }
 
-
-/* First, reset some styles */
-
-
-
-
-/* Media Query - Show burger on mobile */
 @media screen and (max-width: 1000px) {
     .burger-menu {
-        display: block;  /* Changed from 'flex' to 'block' */
+        display: block;
         position: relative;
         z-index: 1001;
     }
@@ -332,7 +320,7 @@ nav {
     .nav-btn {
         position: fixed;
         top: 70px;
-        right: -100%;  /* Changed from left to right */
+        right: -100%;
         width: 100%;
         height: calc(100vh - 70px);
         background-color: white;
@@ -340,11 +328,11 @@ nav {
         align-items: center;
         justify-content: flex-start;
         padding-top: 2rem;
-        transition: right 0.3s ease;  /* Changed from left to right */
+        transition: right 0.3s ease;
     }
 
     .nav-btn.active {
-        right: 0;  /* Changed from left to right */
+        right: 0;
     }
 
     .nav-btn a {
@@ -352,7 +340,6 @@ nav {
         font-size: 1.2rem;
     }
 
-    /* Animate burger menu */
     .burger-menu.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }

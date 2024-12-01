@@ -1,7 +1,5 @@
-// Replace these with your Spotify API credentials
-const CLIENT_ID = '';
-const CLIENT_SECRET = '';
-
+const CLIENT_ID = 'YOUR_CLIENT_ID'; // Your actual client ID from Spotify
+const CLIENT_SECRET = 'YOUR_CLIENT_SECRET'; // YOur actual client secret from Spotify
 let accessToken = '';
 
 async function getAccessToken() {
@@ -13,12 +11,10 @@ async function getAccessToken() {
         },
         body: 'grant_type=client_credentials'
     });
-    
     if (!response.ok) {
         console.error('Failed to get access token');
         return;
     }
-    
     const data = await response.json();
     return data.access_token;
 }
@@ -26,15 +22,14 @@ async function getAccessToken() {
 async function fetchPlaylists(mood = 'All') {
     const loading = document.getElementById('loading');
     const container = document.getElementById('playlistsContainer');
-    
+
     loading.style.display = 'block';
-    container.innerHTML = ''; // Clear previous playlists
+    container.innerHTML = '';
 
     try {
         if (!accessToken) {
             accessToken = await getAccessToken();
         }
-
         const searchTerm = mood === 'All' ? 'study' : `${mood} study`;
         const response = await fetch(
             `https://api.spotify.com/v1/search?q=${encodeURIComponent(searchTerm)}&type=playlist&limit=50`,
@@ -49,7 +44,6 @@ async function fetchPlaylists(mood = 'All') {
             console.error('Failed to fetch playlists');
             return;
         }
-
         const data = await response.json();
         displayPlaylists(data.playlists.items);
     } catch (error) {
@@ -82,20 +76,17 @@ function displayPlaylists(playlists) {
                 </a>
             </div>
         `;
-        
         container.appendChild(card);
     });
 }
 
-// Handle mood filter clicks
+// Handle filters
 document.querySelector('.mood-filters').addEventListener('click', (e) => {
     if (e.target.classList.contains('mood-btn')) {
-        // Update active button
         document.querySelectorAll('.mood-btn').forEach(btn => {
             btn.classList.remove('active');
         });
         e.target.classList.add('active');
-
         // Fetch new playlists
         fetchPlaylists(e.target.textContent);
     }
@@ -104,8 +95,7 @@ document.querySelector('.mood-filters').addEventListener('click', (e) => {
 // Initial load
 fetchPlaylists();
 
-// Add this JavaScript to your resources.js file
-
+// Enable burger menu
 document.addEventListener('DOMContentLoaded', function() {
     const burgerMenu = document.querySelector('.burger-menu');
     const navBtn = document.querySelector('.nav-btn');
@@ -114,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
         burgerMenu.classList.toggle('active');
         navBtn.classList.toggle('active');
     });
-  
     // Close menu when clicking outside
     document.addEventListener('click', function(event) {
         if (!event.target.closest('.nav-btn') && 
@@ -124,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navBtn.classList.remove('active');
         }
     });
-  
     // Close menu when clicking on a link
     const navLinks = document.querySelectorAll('.nav-btn a');
     navLinks.forEach(link => {

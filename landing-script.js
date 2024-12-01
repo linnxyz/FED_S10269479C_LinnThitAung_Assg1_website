@@ -1,6 +1,5 @@
 const lottieElement = document.getElementById('lottieAnimation');
 
-// Function to handle animation when element is in the viewport
 const playLottieAnimation = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -10,7 +9,6 @@ const playLottieAnimation = (entries, observer) => {
         }
     });
 };
-
 
 const observerL = new IntersectionObserver(playLottieAnimation, {
     threshold: 0.7
@@ -22,7 +20,6 @@ observerL.observe(lottieElement);
 const heroSection = document.querySelector('.hero');
 const nav = document.querySelector('nav');
 
-// Create navigation links (initially hidden)
 const createNavLinks = () => {
   const navLinksContainer = document.createElement('div');
   navLinksContainer.className = 'nav-links';
@@ -40,12 +37,10 @@ const createNavLinks = () => {
   navLinksContainer.appendChild(wishlistLink);
   navLinksContainer.appendChild(resourcesLink);
   
-  // Find or create a nav container
   let navContainer = nav.querySelector('.nav');
   if (!navContainer) {
     navContainer = document.createElement('div');
     navContainer.className = 'nav';
-    // Move the existing logo into the nav container
     const logo = nav.querySelector('.logo');
     navContainer.appendChild(logo.parentElement.cloneNode(true));
     nav.innerHTML = '';
@@ -57,12 +52,10 @@ const createNavLinks = () => {
 };
 
 const navLinks = createNavLinks();
-
-// Create an Intersection Observer to watch the hero section
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.1 // Trigger when 10% of the hero is visible/invisible
+  threshold: 0.1 
 };
 
 const handleIntersection = (entries) => {

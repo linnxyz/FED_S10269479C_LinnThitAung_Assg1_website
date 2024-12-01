@@ -12,7 +12,7 @@ let currentQuestionIndex = 0;
 let currentScore = 0;
 let selectedAnswer = null;
 
-// Initialize the app
+// Initialization
 document.addEventListener('DOMContentLoaded', () => {
     renderCategories();
     setupSearchListener();

@@ -23,7 +23,7 @@ nav {
     height: 70px;
 }
 
-/* Burger Menu Styles - Updated for visibility */
+/* Burger Menu Styles */
 .burger-menu {
     display: none;
     align-content: center;
@@ -208,10 +208,9 @@ h1 {
     display: none;
 }
 
-/* Media Query - Show burger on mobile */
 @media screen and (max-width: 1000px) {
     .burger-menu {
-        display: block;  /* Changed from 'flex' to 'block' */
+        display: block;
         position: relative;
         z-index: 1001;
     }
@@ -219,7 +218,7 @@ h1 {
     .nav-btn {
         position: fixed;
         top: 70px;
-        right: -100%;  /* Changed from left to right */
+        right: -100%; 
         width: 100%;
         height: calc(100vh - 70px);
         background-color: white;
@@ -227,11 +226,11 @@ h1 {
         align-items: center;
         justify-content: flex-start;
         padding-top: 2rem;
-        transition: right 0.3s ease;  /* Changed from left to right */
+        transition: right 0.3s ease;
     }
 
     .nav-btn.active {
-        right: 0;  /* Changed from left to right */
+        right: 0;
     }
 
     .nav-btn a {
@@ -239,7 +238,6 @@ h1 {
         font-size: 1.2rem;
     }
 
-    /* Animate burger menu */
     .burger-menu.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
